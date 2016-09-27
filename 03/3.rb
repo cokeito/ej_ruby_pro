@@ -35,7 +35,7 @@ pp "2.2.- la suma es #{sum}"
 # 3.- promedio
 a = [1,2,3,9,1,4,5,2,3,6,6]
 avg = a.inject{ |sum, el| sum + el }.to_f / a.size
-pp avg
+pp "el Promedio es: #{avg}"
 
 # 4.1 Incrementar todos los elementos en una unidad. (each)
 a = [1,2,3,9,1,4,5,2,3,6,6]
@@ -48,6 +48,6 @@ pp "f: #{a}"
 a = [1,2,3,9,1,4,5,2,3,6,6]
 b = a.map {|x| x+1 }
 
-pp b
+pp "el array incrementado en una unidad es #{b}"
 
 
