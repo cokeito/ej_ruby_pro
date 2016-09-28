@@ -12,25 +12,38 @@
 require('pp')
 # 1.- Eliminar todos los números pares del arreglo.
 
-a = [1,2,3,9,1,4,5,2,3,6,6]
+a 		= [1,2,3,9,1,4,5,2,3,6,6]
+indexes	= []
 
 a.each_with_index do |v,i|
-	a.delete_at(i) if v % 2 == 0 
+	if v.even?
+		a.delete(v)
+	end
 end 
 
-pp a
+
+pp "#{a} sin los pares"
+
+
+
+
 
 # 2.1- Obtener la suma de todos los elementos del arreglo. (each)
 a = [1,2,3,9,1,4,5,2,3,6,6]
 sum = 0;
 a.each { |x| sum += x.to_i }
-pp "2.1.- la suma es #{sum}"
+pp "2.1.- la suma es #{sum} (each)"
 
-# 2.2 map
+# 	2.2 .- Utilizando .inject
+a = [1,2,3,9,1,4,5,2,3,6,6]
+b = a.inject(0) { |x, sum| sum += x }
+pp "2.2.- la suma es #{sum} (inject)"
+
+# 2.2 map (bonus track)
 a = [1,2,3,9,1,4,5,2,3,6,6]
 sum = 0;
 a.map {|x| sum += x.to_i }
-pp "2.2.- la suma es #{sum}"
+pp "2.2.- la suma es #{sum} (map)"
 
 # 3.- promedio
 a = [1,2,3,9,1,4,5,2,3,6,6]
